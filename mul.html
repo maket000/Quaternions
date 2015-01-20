@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Quaternion Multiplication</title>
+		<script type="text/javascript" src="js/mul.js"></script>
+	</head>
+	
+  <body>
+		<h3>Quaternion Multiplication</h3>
+		The product of two quaternions is called the Hamilton product and is determined as follows: <br>
+		For two quaternions, q<sub>1</sub> = a<sub>1</sub>+b<sub>1</sub>i+c<sub>1</sub>j+d<sub>1</sub>k,
+		and q<sub>2</sub> = a<sub>2</sub>+b<sub>2</sub>i+c<sub>2</sub>j+d<sub>2</sub>k, <br>
+		q<sub>1</sub>q<sub>2</sub> = a<sub>1</sub>a<sub>2</sub> - b<sub>1</sub>b<sub>2</sub> - c<sub>1</sub>c<sub>2</sub> - d<sub>1</sub>d<sub>2</sub> <br>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+ (a<sub>1</sub>b<sub>2</sub> + b<sub>1</sub>a<sub>2</sub> + c<sub>1</sub>d<sub>2</sub> - d<sub>1</sub>c<sub>2</sub>)i <br>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+ (a<sub>1</sub>c<sub>2</sub> - b<sub>1</sub>d<sub>2</sub> + c<sub>1</sub>a<sub>2</sub> + d<sub>1</sub>b<sub>2</sub>)j <br>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+ (a<sub>1</sub>d<sub>2</sub> + b<sub>1</sub>c<sub>2</sub> - c<sub>1</sub>b<sub>2</sub> + d<sub>1</sub>a<sub>2</sub>)k <br><br>
+		Use this tool to calculate the Hamilton product of 2 quaternions. <br>
+		
+		<table>
+			<tr>
+				<td>q<sub>1</sub>:</td>
+				<td>a:<input type="text" id="a1"></td>
+				<td>b:<input type="text" id="b1"></td>
+				<td>c:<input type="text" id="c1"></td>
+				<td>d:<input type="text" id="d1"></td>
+			</tr>
+			<tr>
+				<td>q<sub>2</sub>:</td>
+				<td>a:<input type="text" id="a2"></td>
+				<td>b:<input type="text" id="b2"></td>
+				<td>c:<input type="text" id="c2"></td>
+				<td>d:<input type="text" id="d2"></td>
+			</tr>
+			<tr>
+				<td id="rh"></td>
+				<td id="ra"></td>
+				<td id="rb"></td>
+				<td id="rc"></td>
+				<td id="rd"></td>
+			</tr>	
+		</table><br>
+		<button onclick="calculate()">Multiply</button>
+		<div id="error"></div>
+	</body>
+</html>
